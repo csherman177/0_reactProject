@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import NavBar from "./NavBar";
+import Navbar from "./Navbar";
 import Content from "./Content";
 
 function App() {
   return (
     <div>
       <Header />
-      <NavBar />
+      <Navbar />
       <Content />
     </div>
   );
