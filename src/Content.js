@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css.css";
 
 const AboutMeSection = () => {
@@ -7,7 +7,7 @@ const AboutMeSection = () => {
       <h2>About Me</h2>
       <div className="container">
         <div className="image">
-          <img src="./SlackPhoto.jpg" alt="Courtney's Image" />
+          <img src="./SlackPhoto.jpg" alt="Courtney" />
         </div>
         <div className="text">
           <p>
@@ -134,30 +134,119 @@ function PortfolioSection() {
   );
 }
 
-function ContactSection() {
-  return (
-    <section id="ContactMe">
-      <h2>Contact</h2>
-      {/* Content for the Contact section */}
-    </section>
-  );
-}
+const ResumeSection = () => {
+  // Replace this URL with the actual URL of your downloadable resume
+  const resumeUrl = "https://example.com/your_resume.pdf";
 
-function ResumeSection() {
+  const proficiencies = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Express.js",
+    "SQL",
+    "Git",
+    "RESTful APIs",
+  ];
+
   return (
-    <section id="Resume">
+    <section id="resume">
       <h2>Resume</h2>
-      {/* Content for the Resume section */}
+      <p>
+        <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+          Download Resume
+        </a>
+      </p>
+      <h3>Proficiencies</h3>
+      <ul>
+        {proficiencies.map((proficiency, index) => (
+          <li key={index}>{proficiency}</li>
+        ))}
+      </ul>
     </section>
   );
-}
+};
+const ContactCard = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
 
+  const validateEmail = (input) => {
+    // Simple email validation regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(input);
+  };
+
+  const handleBlur = (field) => {
+    if (field === "name" && name.trim() === "") {
+      setNameError("Name is required");
+    } else {
+      setNameError("");
+    }
+
+    if (field === "email" && email.trim() === "") {
+      setEmailError("Email is required");
+    } else if (field === "email" && !validateEmail(email)) {
+      setEmailError("Invalid email address");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform form submission or other actions here
+    console.log("Submitted:", { name, email, message });
+  };
+
+  return (
+    <div className="contact-card">
+      <h2>Contact</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onBlur={() => handleBlur("name")}
+          />
+          {nameError && <div className="error">{nameError}</div>}
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={() => handleBlur("email")}
+          />
+          {emailError && <div className="error">{emailError}</div>}
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
 function Content() {
   return (
     <div>
       <AboutMeSection />
       <PortfolioSection />
-      <ContactSection />
+      <ContactCard />
       <ResumeSection />
     </div>
   );

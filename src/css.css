@@ -24,15 +24,19 @@
     height: auto;
   }
 
-  /* portfolioSection.css */
+/* portfolioSection.css */
 
 #portfolio {
-    margin: 20px 0;
+    margin: 20px auto; /* Add 'auto' to horizontally center the element */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the children horizontally */
   }
   
   .portfolio-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap when there's not enough space */
+    justify-content: center; /* Center the cards horizontally */
     gap: 20px;
   }
   
@@ -62,4 +66,144 @@
   .card-body {
     flex: 1;
   }
+
+  /* contactCard.css */
+
+.contact-card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
   
+  .contact-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  /* CSS styles for the Footer component */
+footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links {
+    flex: 1;
+  }
+  
+  .footer-links h2 {
+    margin: 0;
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .social-links li {
+    margin-right: 20px;
+  }
+  
+  .social-links a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-copyright {
+    text-align: right;
+  }
+  
+  .footer-copyright p {
+    margin: 0;
+  }
+  /* Navbar.css */
+.navbar-style {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #fff;
+    margin-right: 15px;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
