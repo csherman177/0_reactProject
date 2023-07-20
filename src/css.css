@@ -1,0 +1,65 @@
+/* aboutMe.css */
+
+#about {
+    margin: 20px 0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* portfolioSection.css */
+
+#portfolio {
+    margin: 20px 0;
+  }
+  
+  .portfolio-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .card a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .card a h3 {
+    margin: 10px 0;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    flex: 1;
+  }
+  

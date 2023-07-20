@@ -1,7 +1,165 @@
 import React from "react";
+import "./css.css";
 
-function Content() {
-  return <section>{/* Content section content */}</section>;
+const AboutMeSection = () => {
+  return (
+    <section id="about">
+      <h2>About Me</h2>
+      <div className="container">
+        <div className="image">
+          <img src="./SlackPhoto.jpg" alt="Courtney's Image" />
+        </div>
+        <div className="text">
+          <p>
+            Hi there! I'm Courtney, a passionate full stack developer with a
+            focus on web development. I embarked on this exciting journey with a
+            deep curiosity for technology and a strong desire to create
+            meaningful digital experiences.
+          </p>
+          <p>
+            As a full stack developer, I enjoy working with both the front-end
+            and back-end technologies. From crafting beautiful and responsive
+            user interfaces using modern frameworks like React, to designing
+            robust server-side architecture and APIs, I love the entire spectrum
+            of web development.
+          </p>
+          <p>
+            In addition to my full stack skills, I currently write raw SQL
+            queries for my day job. I have extensive experience in managing
+            databases, writing complex SQL queries, and optimizing database
+            performance. My proficiency in SQL allows me to build efficient and
+            scalable applications that leverage the power of data.
+          </p>
+          <p>
+            I'm constantly learning and exploring new technologies to stay
+            up-to-date with the latest trends in the industry. I believe in the
+            power of continuous improvement and strive to deliver high-quality
+            solutions that meet the needs of users and businesses alike.
+          </p>
+          <p>
+            When I'm not coding, you can find me enjoying outdoor activities,
+            experimenting with new recipes in the kitchen, or immersing myself
+            in a good book. Feel free to connect with me on LinkedIn or drop me
+            a message through the contact form below. I'm always excited to
+            collaborate on new projects and connect with fellow developers!
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const projects = [
+  {
+    id: 1,
+    title: "Project 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: "path/to/image1.jpg",
+    link: "https://project1-link.com",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: "path/to/image2.jpg",
+    link: "https://project2-link.com",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: "path/to/image3.jpg",
+    link: "https://project3-link.com",
+  },
+  {
+    id: 4,
+    title: "Project 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: "path/to/image4.jpg",
+    link: "https://project4-link.com",
+  },
+  {
+    id: 5,
+    title: "Project 5",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: "path/to/image5.jpg",
+    link: "https://project5-link.com",
+  },
+  {
+    id: 6,
+    title: "Project 6",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: "path/to/image6.jpg",
+    link: "https://project6-link.com",
+  },
+];
+
+function PortfolioSection() {
+  // Separate the projects into topProjects and bottomProjects
+  const topProjects = projects.slice(0, 3);
+  const bottomProjects = projects.slice(3);
+
+  return (
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div className="portfolio-cards">
+        <div className="top-projects">
+          {topProjects.map((project) => (
+            <div key={project.id} className="card">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <h3>{project.title}</h3>
+                <img src={project.imageUrl} alt={project.title} />
+              </a>
+              <div className="card-body">
+                <p>{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="bottom-projects">
+          {bottomProjects.map((project) => (
+            <div key={project.id} className="card">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <h3>{project.title}</h3>
+                <img src={project.imageUrl} alt={project.title} />
+              </a>
+              <div className="card-body">
+                <p>{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
+function ContactSection() {
+  return (
+    <section id="ContactMe">
+      <h2>Contact</h2>
+      {/* Content for the Contact section */}
+    </section>
+  );
+}
+
+function ResumeSection() {
+  return (
+    <section id="Resume">
+      <h2>Resume</h2>
+      {/* Content for the Resume section */}
+    </section>
+  );
+}
+
+function Content() {
+  return (
+    <div>
+      <AboutMeSection />
+      <PortfolioSection />
+      <ContactSection />
+      <ResumeSection />
+    </div>
+  );
+}
 export default Content;
