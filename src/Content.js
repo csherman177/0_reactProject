@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./css.css";
+import image from "./csphoto.jpg";
+import jateimg from "./jate_screenshot.png";
 
 const AboutMeSection = () => {
   return (
@@ -7,7 +9,7 @@ const AboutMeSection = () => {
       <h2>About Me</h2>
       <div className="container">
         <div className="image">
-          <img src="./SlackPhoto.jpg" alt="Courtney" />
+          <img src={image} alt="Courtney" />
         </div>
         <div className="text">
           <p>
@@ -52,42 +54,42 @@ const AboutMeSection = () => {
 const projects = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Progressive Web Application",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "path/to/image1.jpg",
+    image: jateimg,
     link: "https://project1-link.com",
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "NoSQL Project",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageUrl: "path/to/image2.jpg",
     link: "https://project2-link.com",
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "MVC Project",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageUrl: "path/to/image3.jpg",
     link: "https://project3-link.com",
   },
   {
     id: 4,
-    title: "Project 4",
+    title: "Logo Craft",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageUrl: "path/to/image4.jpg",
     link: "https://project4-link.com",
   },
   {
     id: 5,
-    title: "Project 5",
+    title: "Weather Dashboard Project",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageUrl: "path/to/image5.jpg",
     link: "https://project5-link.com",
   },
   {
     id: 6,
-    title: "Project 6",
+    title: "Password Generator",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageUrl: "path/to/image6.jpg",
     link: "https://project6-link.com",

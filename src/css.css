@@ -131,10 +131,10 @@
     outline: none;
   }
   
-  body, html {
+  /* body, html {
     height: 100%;
   }
-  
+   */
   body {
     display: flex;
     justify-content: center;
@@ -206,4 +206,50 @@ footer {
   
   .nav-link.active {
     font-weight: bold;
+  }
+
+  /* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the hero section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: #ccc; /* Set your hero background image here or use a linear gradient */
+    color: #fff;
+  }
+  
+  /* Style the hero content (text on the left) */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: left;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+  }
+  
+ /*Hero Image Styling*/
+  .slant-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: url('lifestyle.jpg') center/cover; /* Replace 'path/to/photo.jpg' with your photo's path */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 60% 0); /* Adjust the polygon points to create the slant effect */
   }
