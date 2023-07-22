@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "./css.css";
-import image from "./csphoto.jpg";
 import jateimg from "./jate_screenshot.png";
+import nosqlimg from "./nosql_screenshot.png";
+import mvcimg from "./mvc.png";
+import logoCraftimg from "./logoCraft.png";
+import weatherDashimg from "./weatherDash.png";
+import passwordGeneratorimg from "./passwordGenerator.png";
+import csphoto from "./csphoto.jpg";
+import yourResume from "./CSYardi.pdf";
 
 const AboutMeSection = () => {
   return (
@@ -9,7 +15,7 @@ const AboutMeSection = () => {
       <h2>About Me</h2>
       <div className="container">
         <div className="image">
-          <img src={image} alt="Courtney" />
+          <img src={csphoto} alt="Courtney" />
         </div>
         <div className="text">
           <p>
@@ -55,44 +61,50 @@ const projects = [
   {
     id: 1,
     title: "Progressive Web Application",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: jateimg,
-    link: "https://project1-link.com",
+    description:
+      "AS A developerI WANT to create notes or code snippets with or without an internet connection SO THAT I can reliably retrieve them for later use",
+    imageUrl: jateimg,
+    link: "https://pwacourtney-26f45159e4af.herokuapp.com/",
   },
   {
     id: 2,
     title: "NoSQL Project",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "path/to/image2.jpg",
-    link: "https://project2-link.com",
+    description:
+      "AS A social media startup I WANT an API for my social network that uses a NoSQL database SO THAT my website can handle large amounts of unstructured data",
+    imageUrl: nosqlimg,
+    link: "https://csherman177.github.io/nosql/",
   },
   {
     id: 3,
     title: "MVC Project",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "path/to/image3.jpg",
-    link: "https://project3-link.com",
+    description:
+      "AS A developer who writes about tech I WANT a CMS-style blog site SO THAT I can publish articles, blog posts, and my thoughts and opinions",
+    imageUrl: mvcimg,
+    link: "https://csherman177.github.io/mvc_Project/",
   },
   {
     id: 4,
     title: "Logo Craft",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "path/to/image4.jpg",
-    link: "https://project4-link.com",
+    description:
+      "AS a freelance web developer I WANT to generate a simple logo for my projects SO THAT I don't have to pay a graphic designer",
+    imageUrl: logoCraftimg,
+    link: "https://csherman177.github.io/logoCraft/",
   },
   {
     id: 5,
     title: "Weather Dashboard Project",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "path/to/image5.jpg",
-    link: "https://project5-link.com",
+    description:
+      "AS A traveler I WANT to see the weather outlook for multiple cities SO THAT I can plan a trip accordingly",
+    imageUrl: weatherDashimg,
+    link: "https://csherman177.github.io/weatherApp/#",
   },
   {
     id: 6,
     title: "Password Generator",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "path/to/image6.jpg",
-    link: "https://project6-link.com",
+    description:
+      "AS AN employee with access to sensitive data I WANT to randomly generate a password that meets certain criteria SO THAT I can create a strong password that provides greater security",
+    imageUrl: passwordGeneratorimg,
+    link: "https://csherman177.github.io/PasswordGenerator/",
   },
 ];
 
@@ -110,7 +122,9 @@ function PortfolioSection() {
             <div key={project.id} className="card">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <h3>{project.title}</h3>
-                <img src={project.imageUrl} alt={project.title} />
+                <div className="card-img-container">
+                  <img src={project.imageUrl} alt={project.title} />
+                </div>
               </a>
               <div className="card-body">
                 <p>{project.description}</p>
@@ -123,7 +137,9 @@ function PortfolioSection() {
             <div key={project.id} className="card">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <h3>{project.title}</h3>
-                <img src={project.imageUrl} alt={project.title} />
+                <div className="card-img-container">
+                  <img src={project.imageUrl} alt={project.title} />
+                </div>
               </a>
               <div className="card-body">
                 <p>{project.description}</p>
@@ -137,38 +153,18 @@ function PortfolioSection() {
 }
 
 const ResumeSection = () => {
-  // Replace this URL with the actual URL of your downloadable resume
-  const resumeUrl = "https://example.com/your_resume.pdf";
-
-  const proficiencies = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Express.js",
-    "SQL",
-    "Git",
-    "RESTful APIs",
-  ];
-
   return (
     <section id="resume">
       <h2>Resume</h2>
       <p>
-        <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+        <a href={yourResume} target="_blank" rel="noopener noreferrer">
           Download Resume
         </a>
       </p>
-      <h3>Proficiencies</h3>
-      <ul>
-        {proficiencies.map((proficiency, index) => (
-          <li key={index}>{proficiency}</li>
-        ))}
-      </ul>
     </section>
   );
 };
+
 const ContactCard = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -177,7 +173,6 @@ const ContactCard = () => {
   const [emailError, setEmailError] = useState("");
 
   const validateEmail = (input) => {
-    // Simple email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(input);
   };
@@ -200,7 +195,6 @@ const ContactCard = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form submission or other actions here
     console.log("Submitted:", { name, email, message });
   };
 

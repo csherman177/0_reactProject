@@ -20,53 +20,59 @@
   }
   
   .image img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
   }
 
 /* portfolioSection.css */
 
 #portfolio {
-    margin: 20px auto; /* Add 'auto' to horizontally center the element */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the children horizontally */
-  }
-  
-  .portfolio-cards {
-    display: flex;
-    flex-wrap: wrap; /* Allow the cards to wrap when there's not enough space */
-    justify-content: center; /* Center the cards horizontally */
-    gap: 20px;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .card a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .card a h3 {
-    margin: 10px 0;
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-body {
-    flex: 1;
-  }
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px; /* Set a fixed width for the cards */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.card a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.card a h3 {
+  margin: 10px 0;
+}
+
+/* Update image sizes here */
+.card-img-container {
+  height: 150px; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide any image overflow */
+}
+
+.card-img-container img {
+  width: 100%; /* Set the image to take the full width of the container */
+  height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+}
+
+.card-body {
+  flex: 1;
+}
   /* contactCard.css */
 
 .contact-card {

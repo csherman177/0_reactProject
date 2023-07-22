@@ -9,19 +9,29 @@ function Navbar() {
       padding: "10px",
     },
   };
-  // Initialize the active section state to "Home" (or any default section)
   const [activeSection, setActiveSection] = useState("Home");
 
   // Function to handle navigation item clicks
   const handleNavItemClick = (section) => {
     setActiveSection(section);
+
+    // Get the DOM element of the section to scroll to
+    const targetSection = document.getElementById(section);
+    if (targetSection) {
+      // Scroll to the section
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-style" style={styles.navbar}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#Navbar">
-          Navbar
+        <a
+          className="navbar-brand"
+          href="#Home"
+          onClick={() => handleNavItemClick("Home")}
+        >
+          Courtney Sherman
         </a>
         <button
           className="navbar-toggler"
@@ -37,17 +47,10 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a
-              className={`nav-link ${activeSection === "Home" ? "active" : ""}`}
-              href="#Home"
-              onClick={() => handleNavItemClick("Home")}
-            >
-              Home
-            </a>
-            <a
               className={`nav-link ${
                 activeSection === "AboutMe" ? "active" : ""
               }`}
-              href="#AboutMe"
+              href="#about"
               onClick={() => handleNavItemClick("AboutMe")}
             >
               About Me
@@ -56,7 +59,7 @@ function Navbar() {
               className={`nav-link ${
                 activeSection === "Portfolio" ? "active" : ""
               }`}
-              href="#Portfolio"
+              href="#portfolio"
               onClick={() => handleNavItemClick("Portfolio")}
             >
               Portfolio
@@ -65,7 +68,7 @@ function Navbar() {
               className={`nav-link ${
                 activeSection === "Resume" ? "active" : ""
               }`}
-              href="#Resume"
+              href="#resume"
               onClick={() => handleNavItemClick("Resume")}
             >
               Resume
@@ -74,7 +77,7 @@ function Navbar() {
               className={`nav-link ${
                 activeSection === "ContactMe" ? "active" : ""
               }`}
-              href="#ContactMe"
+              href="#contact-card"
               onClick={() => handleNavItemClick("ContactMe")}
             >
               Contact Me
