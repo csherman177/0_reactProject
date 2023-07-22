@@ -10,20 +10,20 @@ SO THAT I can assess whether they're a good candidate for an open position
 
 ## Project URL
 
-https://github.com/csherman177/mvc_Project
+https://github.com/csherman177/0_reactProject
 
 ## Deployment
 
-https://csherman177.github.io/mvc_Project/
+https://csherman177.github.io/0_reactProject/
 
-## Demo/Screenshots
+## Screenshot
 
   <table>
   <tr>
     <td>Developer Page</td>
   </tr>
   <tr>
-    <td><img src= "cs.png" height=300 alt="My Tech Blog Screenshot"></td>
+    <td><img src= "cs.png" height=300 alt="Screenshot of Page"></td>
   </tr>
   </table>
  

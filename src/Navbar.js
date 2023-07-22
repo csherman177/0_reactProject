@@ -15,10 +15,8 @@ function Navbar() {
   const handleNavItemClick = (section) => {
     setActiveSection(section);
 
-    // Get the DOM element of the section to scroll to
     const targetSection = document.getElementById(section);
     if (targetSection) {
-      // Scroll to the section
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
   };
