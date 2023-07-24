@@ -1,5 +1,6 @@
 {
-  "name": "00-react-proj",
+  "name": "0_reactProject",
+  "homepage": "https://csherman177.github.io/0_reactProject",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +10,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "dotenv": "^16.3.1",
+    "gh-pages": "^5.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.10.1",
@@ -16,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
