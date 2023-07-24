@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/0_reactProject/static/css/main.e2b19ce0.css",
+    "main.js": "/0_reactProject/static/js/main.80dcf874.js",
+    "static/media/csphoto.jpg": "/0_reactProject/static/media/csphoto.f0801760e9bf88450368.jpg",
+    "static/media/CSYardi.pdf": "/0_reactProject/static/media/CSYardi.6dfafc6aa143f1775e40.pdf",
+    "static/media/weatherDash.png": "/0_reactProject/static/media/weatherDash.685d1184355560191b2a.png",
+    "static/media/lifestyle.jpg": "/0_reactProject/static/media/lifestyle.ab1ae6dba1b146204fa1.jpg",
+    "static/media/nosql_screenshot.png": "/0_reactProject/static/media/nosql_screenshot.6f1d66437a498d69b5e5.png",
+    "static/media/mvc.png": "/0_reactProject/static/media/mvc.935d33f7fa6b9fcb01a1.png",
+    "static/media/logoCraft.png": "/0_reactProject/static/media/logoCraft.cd99ca4a8bb2366ad02c.png",
+    "static/media/passwordGenerator.png": "/0_reactProject/static/media/passwordGenerator.a16f15bcf07772bb551c.png",
+    "static/media/jate_screenshot.png": "/0_reactProject/static/media/jate_screenshot.086e961b506da78aa37c.png",
+    "index.html": "/0_reactProject/index.html",
+    "main.e2b19ce0.css.map": "/0_reactProject/static/css/main.e2b19ce0.css.map",
+    "main.80dcf874.js.map": "/0_reactProject/static/js/main.80dcf874.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2b19ce0.css",
+    "static/js/main.80dcf874.js"
+  ]
+}
